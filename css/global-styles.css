@@ -1,0 +1,16 @@
+body {
+    font-family: sans-serif, Arial, Helvetica ;
+    margin: 25px;
+    padding: 10;
+
+    h1 {
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color: blue;
+        background-color: aquamarine;
+        padding: 25;
+        border: 3px solid blue;
+    }
+
+    
+
+}

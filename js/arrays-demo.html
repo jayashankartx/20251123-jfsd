@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Objects</title>
+</head>
+
+<body>
+
+    <script>
+        document.write("<h4> ARRAYS AND OBJECTS examples</h4>");
+
+        function arrayObject() {
+            let products = ["laptop", "camera", "computer", "phone"];
+            document.write("<p> Products Length" + products.length + "</p>");
+            for (let i = 0; i < products.length; i++) {
+                document.write("<p> Item at position " + i + " " + products[i] + "</p>");
+
+            }
+
+            for (p of products) {
+                document.write("<p> Product " + p + "</p>");
+
+            }
+
+        }
+
+
+        function mathProblems() {
+            let numbers = [75,-5,8,20,-8,5,15];
+            let sum;
+            let max;
+            let min;
+
+            for (p of numbers) {
+                sum = sum + p;
+                if(p>max){
+                    max = p;
+                }else if(p<min){
+                    min=p;
+
+                }else if(max == undefined){
+                    max = p;
+                }else if(min == undefined){
+                    min = p;
+                }
+            
+                
+            }
+            document.write("<p> Sum " + p + "</p>");
+            document.write("<p> Max " + max + "</p>");
+            document.write("<p> Min " + min + "</p>");
+
+        }
+
+        mathProblems();
+
+
+        arrayObject();
+    </script>
+
+</body>
+
+</html>

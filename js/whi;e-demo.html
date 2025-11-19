@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Loop</title>
+</head>
+
+<body>
+    <script>
+        document.write("<h4> While Loop Demo</h4>");
+
+
+        let ticket = 5;
+        while (ticket > 0) {
+            document.write("<p> Printing Ticket " + ticket);
+            ticket--;
+
+        }
+
+        let pin = 8899;
+        let userPin;
+
+        do {
+            userPin = prompt("Enter the user pin");
+        } while (userPin != pin)
+        document.write("PIN is correct, you can proceed to withdraw");
+
+    </script>
+</body>
+
+</html>

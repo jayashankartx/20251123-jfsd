@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick = "handleClickById()">Button</button>
+    <div id="main"> Button Clicked: </div>
+    <div>
+        <button id = "b1" onclick = "applyColor('Red')">Red</button>
+        <button id = "b2" onclick = "applyColor('Green')">Green</button>
+        <button id = "b3" onclick = "applyColor('Blue')">Blue</button>
+    </div>
+
+    <script>
+        document.write("<h4> EVent Handler Demo</h4>");
+        let counter = 0;
+
+        function handleClick(){
+            counter++;
+            //console.log("Button clicked " + counter);
+            document.write("Button clicked " + counter);
+        }
+
+
+        function handleClickById(){
+            let ele = document.getElementById("main");
+            //document.querySelector("#main"); //Same
+            counter++;
+            ele.textContent = 'Button Clicked : ' + counter + " times.";
+            console.log( 'Button Clicked : ' + counter + " times." );
+            //console.log("Button clicked " + counter);
+            //document.write("Button clicked " + counter);
+        }
+
+        function applyColor(color){
+            let mainElec = document.querySelector("#main");
+            mainElec.style.color=color;
+        }
+        
+
+    </script>
+    
+</body>
+</html>

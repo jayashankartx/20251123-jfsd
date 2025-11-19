@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        document.write("<h4> Object function demo</h4>");
+
+        //Literal style object creation
+        let person1 = {
+            id: 100, name: "Raj", salary: 30000, display: function () {
+                document.write("<p> Emp1 Id = " + person1.id + ", Name " + person1.name + ", Salary " + person1.salary + " </p>");
+            }
+        };
+        person1.display();
+
+        //Function style object creation with constructor
+        function student(rollno, name) {
+            this.rollno = rollno;
+            this.name = name;
+            this.print = function () {
+                document.write("<p> Name " + this.name + ", Roll number" + this.rollno + " </p>");
+
+            }
+        }
+
+        let student1 = new student(1, "John");
+        let student2 = new student(2, "Jane");
+
+        student1.print();
+        student2.print();
+
+    </script>
+</body>
+
+</html>

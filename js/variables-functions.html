@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables And Functions</title>
+</head>
+<body>
+    <h1>Variables and Functions</h1>
+    <script>
+        function greet(firstname, lastname){
+            document.write( "<h3>Hello " + firstname + " " + lastname + "</h3>");
+        }
+
+        function addNumbers(x,y){
+            document.write( "<h3>addNumbers(x,y) for numbers " + x + " " + y + "</h3>");
+            return (x + y);
+        }
+        greet("Jaggi", "Shankarappa");
+        var result = addNumbers(5,6);
+        document.write( "<h3>addNumbers(x,y) result " + result + "</h4>");
+        
+        var result = addNumbers(20,6);
+        document.write( "<h3>addNumbers(x,y) again result " + result + "</h4>");
+        
+        var username = "Kishor"; //string
+        var phone = 9876543211; //number
+        var isEmployed = true; //boolean
+
+        document.write( "<h3>Usermame = " + username + "</h3>");
+        document.write( "<h3>Phone" + phone + ", IsEMployed = " + isEmployed + "</h3>");
+
+        //In javascript you dont habve types to spciffy a variable can storre  specific type of value
+        //you can identify the types using typeof built in function
+        document.write(typeof(username) + "is username typeof" + typeof(phone) + " is the type of phone number");
+
+    </script>
+</body>
+</html>

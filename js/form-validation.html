@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation Demo</title>
+</head>
+<body>
+    <form action="index.html" method="post" onsubmit="return validateForm()">
+        <label>Username</label>
+        <input type="text" name="'Username" id="username"> <br />
+        <label>Password</label>
+        <input type="text" name="'password" id="password1"> <br />
+        <label>Confirm Password:</label>
+        <input type="text" name="'password2" id="password2"> <br />
+        <input type="submit" value="Register">
+    </form>
+
+    <script>
+        function validateForm(){
+            let username = document.querySelector("#username").value;
+            let password1 = document.querySelector("#password1").value;
+            let password2 = document.querySelector("#password2").value;
+
+            if(username.length<=3) {
+                alert('The length of the user name must be greater than 3 chars');
+                return false;
+            }
+
+            if(password1.length<=3 || password2.length <= 3) {
+                alert('The length of the password must be greater than 3 chars');
+                return false;
+            }
+
+            if(password1 != password2) {
+                alert('The password and confirm password do not matcgh');
+                return false;
+            }
+        }
+    </script>
+    
+</body>
+</html>

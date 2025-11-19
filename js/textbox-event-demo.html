@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Text Box and Button Demo</title>
+</head>
+
+<body>
+    <input type="text" id="num1">
+    <input type="text" id="num2"><br />
+    <input type="text" id="result"> <br>
+
+    <p>
+    <div onclick="mathOperation(event)">
+        <button id="add">Add</button>
+        <button id="sub">Sub</button>
+        <button id="mul">Mul</button>
+        <button id="div">Div</button>
+    </div>
+    </p>
+
+    <script>
+        function mathOperation(e) {
+
+
+            let ele = e.target;
+            console.log(ele.tagName);
+            console.log(ele.id);
+            let num1 = document.querySelector('#num1');
+            let num2 = document.querySelector('#num2');
+            let result = document.querySelector('#result');
+
+            console.log(ele.id);
+            console.log(num1.value);
+            console.log(num2.textContent);
+            
+            console.log(num2.nodeValue);
+
+            if (ele.id == 'add') {
+                result.value = Number(num1.value) + Number(num2.value);
+            } else if (ele.id == 'sub') {
+                result.value = num1.value - num2.value;
+            } else if (ele.id == 'mul') {
+                result.value = num1.value * num2.value;
+            } else if (ele.id == 'div') {
+                result.value = num1.value / num2.value;
+            }
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
