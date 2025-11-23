@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARROW FUNCTIONS</title>
+</head>
+<body>
+    <h1>ARROW FUNCTIONS</h1>
+    <script>
+        //ARROW FUNCTION => 
+        let items = [10, 20, 30, 40, 50];
+        items.forEach(function(ele, i) {
+            document.write(`<p>Callback function Element = ${ele} Index = ${i} </p>`);
+        }); 
+
+
+        //DIRECTLY USING THE PARAMETER
+        items.forEach((ele,i)=> document.write(`<p>within arrow function Element = ${ele} Index = ${i} </p>`) ); 
+        
+    </script>
+
+</body>
+</html>
